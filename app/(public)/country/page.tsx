@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { countryData } from "@/app/data/countries";
+
 
 export default function Countrylist(){
     return(
