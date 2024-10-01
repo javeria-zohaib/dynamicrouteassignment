@@ -19,7 +19,7 @@ export default function Countrypage({params}:{params:{countries_name:string}}){
             countryDetail=countryData[4]
         break;
         default:null 
-        break;
+        
 
     }
     if(!countryDetail){
