@@ -3,17 +3,23 @@ import { CountryData } from "@/app/data/type";
 export default function Countrypage({params}:{params:{countries_name:string}}){
     let countryDetail:CountryData|null=null;
     switch (params.countries_name){
-        case "Pakistan":countryDetail=countryData[0]
+        case "Pakistan":
+            countryDetail=countryData[0]
         break;
-        case "Qatar":countryDetail=countryData[1]
+        case "Qatar":
+            countryDetail=countryData[1]
         break;
-        case "India":countryDetail=countryData[2]
+        case "India":
+            countryDetail=countryData[2]
         break;
-        case "Bangladesh":countryDetail=countryData[3]
+        case "Bangladesh":
+            countryDetail=countryData[3]
         break;
-        case "Afghanistan":countryDetail=countryData[4]
+        case "Afghanistan":
+            countryDetail=countryData[4]
         break;
-        default:null
+        default:null 
+        break;
 
     }
     if(!countryDetail){
@@ -23,11 +29,11 @@ export default function Countrypage({params}:{params:{countries_name:string}}){
     }
     return(
         <div>
-            <ul className="text-2xl text-center mt-20 space-x-3 bg-fuchsia-700">
+            <ul className="text-3xl text-center mt-20 space-x-3 bg-fuchsia-900">
             <li>NAME:{countryDetail.name}</li>
             <li>POPULATION:{countryDetail.population}</li>
             <li>CAPITAL:{countryDetail.capital}</li></ul>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA97xDtaxfYUmAIO7g5a8aAB46SHpT3QiZ7g&s" alt="map" className="mx-auto h-auto mt-10" />
+          
         </div>
     )
 }
